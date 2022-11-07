@@ -1,0 +1,8 @@
+ul {
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex: 2;
+	background-color: #a3c7d6;
+}
