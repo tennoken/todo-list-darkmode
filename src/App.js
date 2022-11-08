@@ -1,29 +1,24 @@
+import TodoList from './components/TodoList/TodoList';
+import Header from './components/Header/Header';
 import { useState } from 'react';
-import TodoAddForm from './components/TodoAddForm';
-import TodoList from './components/TodoList';
-import './app.module.css';
 
+const filters = ['all', 'active', 'completed'];
 function App() {
-	const [items, setItems] = useState([
-		{ id: 1, todo: '산책' },
-		{ id: 2, todo: '공부' },
-	]);
+    const [filter, setFilter] = useState('all');
 
-	const addItem = (item) => {
-		setItems((prev) => [...prev, item]);
-	};
-
-	const deleteItem = (id) => {
-		setItems((prev) => items.filter((item) => item.id !== parseInt(id)));
-	};
-
-	return (
-		<main>
-			<header>Header</header>
-			<TodoList items={items} deleteItem={deleteItem} />
-			<TodoAddForm items={items} addItem={addItem} />
-		</main>
-	);
+    const updateFilter = (status) => {
+        setFilter(status);
+    };
+    return (
+        <>
+            <Header
+                filters={filters}
+                filter={filter}
+                onUpdatefilter={updateFilter}
+            />
+            <TodoList filter={filter} />
+        </>
+    );
 }
 
 export default App;
