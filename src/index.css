@@ -4,7 +4,15 @@
     --color-grey: #d1d1d1;
     --color-text: #22243b;
     --color-accent: #98a8f8;
+    --color-text: #000;
     --color-white: #fff;
+}
+
+html.dark {
+    --color-bg-dark: #000000;
+    --color-bg: #150050;
+    --color-text: #fff;
+    --color-accent: #7911cf;
 }
 
 * {

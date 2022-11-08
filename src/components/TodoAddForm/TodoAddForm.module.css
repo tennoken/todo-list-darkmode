@@ -15,11 +15,12 @@
 
 .button {
     background-color: var(--color-accent);
-    color: var(--color-white);
+    color: var(--color-text);
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
     cursor: pointer;
     padding: 0 2rem;
+    color: var(--color-white);
 }
 
 .button:hover {

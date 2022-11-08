@@ -15,6 +15,7 @@
 .text {
     flex: 1 1 auto;
     padding-left: 0.8rem;
+    color: var(--color-text);
 }
 
 .icon {
@@ -34,4 +35,5 @@
     height: 100%;
     background: transparent;
     cursor: pointer;
+    color: var(--color-white);
 }

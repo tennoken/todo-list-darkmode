@@ -2,13 +2,10 @@ import TodoAddForm from '../TodoAddForm/TodoAddForm';
 import { useState } from 'react';
 import Todo from '../Todo/Todo';
 import styles from './Todolist.module.css';
+import { useEffect } from 'react';
 
 export default function TodoList({ filter }) {
-    const [items, setItems] = useState([
-        { id: '1', todo: '산책', status: 'active' },
-        { id: '2', todo: '공부', status: 'active' },
-        { id: '3', todo: '독서', status: 'completed' },
-    ]);
+    const [items, setItems] = useState(readTodos);
 
     const filteredItems = getFilterdItems(items, filter);
 
@@ -25,6 +22,11 @@ export default function TodoList({ filter }) {
     const handleDelete = (deleted) => {
         setItems(items.filter((item) => item.id !== deleted.id));
     };
+
+    useEffect(() => {
+        localStorage.setItem('items', JSON.stringify(items));
+    }, [items]);
+
     return (
         <section className={styles.container}>
             <ul className={styles.list}>
@@ -40,6 +42,12 @@ export default function TodoList({ filter }) {
             <TodoAddForm onAdd={handleAdd} />
         </section>
     );
+}
+
+function readTodos() {
+    console.log('readTodos');
+    const todos = localStorage.getItem('items');
+    return todos ? JSON.parse(todos) : [];
 }
 
 function getFilterdItems(items, filter) {

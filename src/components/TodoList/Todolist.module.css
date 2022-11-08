@@ -9,5 +9,5 @@
     flex: 1 1 auto;
     margin: 0;
     overflow-y: auto;
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
 }
