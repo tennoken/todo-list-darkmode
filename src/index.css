@@ -9,9 +9,9 @@
 }
 
 html.dark {
-    --color-bg-dark: #000000;
+    --color-bg-dark: #000;
     --color-bg: #150050;
-    --color-text: #fff;
+    --color-text: #e5e5e5;
     --color-accent: #7911cf;
 }
 
