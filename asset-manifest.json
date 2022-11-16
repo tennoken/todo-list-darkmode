@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todo-list-darkmode/static/css/main.a1f0f45c.css",
+    "main.js": "/todo-list-darkmode/static/js/main.368e3110.js",
+    "index.html": "/todo-list-darkmode/index.html",
+    "main.a1f0f45c.css.map": "/todo-list-darkmode/static/css/main.a1f0f45c.css.map",
+    "main.368e3110.js.map": "/todo-list-darkmode/static/js/main.368e3110.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1f0f45c.css",
+    "static/js/main.368e3110.js"
+  ]
+}
